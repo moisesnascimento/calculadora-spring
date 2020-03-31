@@ -22,6 +22,7 @@ public class CalculadoraController {
 
     private Map<String, Double> variaveis = new HashMap<>();
 
+	/** Método de somar dois valores */
     @GetMapping(path = "somar")
     public @ResponseBody Double somar(
 	    @RequestParam(name = "a") Double a,
@@ -29,6 +30,7 @@ public class CalculadoraController {
 	return a + b;
     }
 
+	/** Método de somar um valor com uma variável existente */
     @GetMapping(path = "somar/val")
     public @ResponseBody Double somarVal(
 	    @RequestParam(name = "valor") Double valor,
